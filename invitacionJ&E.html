@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(253, 234, 237); /* blanco muy claro semitransparente */
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .imagen {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .imagen {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 10px; /* Espaciado para móviles */
+      box-sizing: border-box;
+    }
+    .imagen img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .separacion_pagina {
+      height: 5px;
+    }
+    .contador {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 30px 10px;
+      color: #333;
+    }
+    .contador span {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .contenedor-reloj {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 10px; /* Agregado */
+      box-sizing: border-box; /* Agregado */
+    }
+    .contenedor-reloj img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .contador {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: black;
+      background: rgba(0, 0, 0, 0); /* semitransparente para mejor contraste */
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    #reloj-numeros {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    #reloj-texto {
+      font-size: 1em;
+      margin-top: 5px;
+      letter-spacing: 10px;
+    }
+    .contenedor-mapa {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .contenedor-mapa img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  .logo-mapa {
+  position: absolute;
+  top: 82%;          /* Ajusta según el lugar deseado sobre la imagen */
+  right: 71%;         /* Ajusta para moverlo horizontalmente */
+  background: rgba(255, 255, 255, 0); /* Fondo transparente */
+  border-radius: 8px;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  gap: 0px; /* Espacio entre el logo y la flecha */
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/* Imagen del logo de Google Maps */
+.logo-mapa .logo-google-maps {
+  width: 80px;
+  height: 80px;
+  animation: clickEffect 2s infinite;
+  display: block;
+  fill: #4285F4;
+}
+
+/* Imagen de la flecha/cursor */
+.logo-mapa .flecha {
+  width: 22px;
+  height: 22px;
+  fill: black;
+  animation: pointerTap 2s infinite;
+  transform-origin: center bottom;
+  display: block;
+}
+
+.contenedor-confirmar {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.contenedor-confirmar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.confirmar {
+  position: absolute;
+  bottom: 5%;
+  top: 86%;          /* Ajusta según el lugar deseado sobre la imagen */
+  right: 16%;         /* Ajusta para moverlo horizontalmente */
+  background: rgba(255, 255, 255, 0); /* fondo semitransparente */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem; 
+  font-weight: bold;
+  color: black;
+  z-index: 2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-confirmar {
+  display: inline-block;
+  color: #000; /* Letra negra */
+  font-size: 1.2rem; 
+  font-weight: bold;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Al pasar el cursor */
+.btn-confirmar:hover {
+  transform: scale(1.1);
+}
+
+/* Efecto de pulsación */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Animación del logo simulando el clic */
+@keyframes clickEffect {
+  0%, 20%, 100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  40% {
+    transform: scale(0.95);
+    filter: brightness(130%);
+  }
+  60% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
+/* Animación del cursor tocando el logo */
+@keyframes pointerTap {
+  0%, 20%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateY(4px) rotate(15deg);
+  }
+  60% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="1.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="contenedor-reloj">
+    <img src="2.jpg" alt="Invitación parte 2">
+    <div class="contador" id="contador">
+      <div id="reloj-numeros"></div>
+      <div id="reloj-texto"></div>
+      <div class="separacion_pagina"></div>
+      <div id="reloj-texto2"></div>
+    </div>
+  </div> 
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="3.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="4.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="5.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="contenedor-mapa">
+    <img src="6.jpg" alt="Invitación parte 2">
+    <a href="https://maps.app.goo.gl/B4PqgySSWGTy93GW9" target="_blank" rel="noopener noreferrer" 
+    class="logo-mapa" title="Ver ubicación en Google Maps">
+    <!-- Logo Google Maps SVG simplificado -->
+     <svg class="logo-google-maps" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z"/>
+     </svg>
+     <!-- Flecha SVG tipo cursor -->
+      <svg class="flecha" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 3l18 9-7 1-1 7z" />
+      </svg>
+    </a>
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="7.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="imagen">
+    <img src="8.jpg" alt="Invitación parte 2">
+  </div>
+  <div class="separacion_pagina"></div>
+  <div class="contenedor-confirmar">
+    <img src="9.jpg" alt="Invitación parte 2">
+    <div class="confirmar" id="confirmar">
+      <a href="https://tulink.com/confirmar" target="_blank" class="btn-confirmar">Confirmar asistencia</a>
+    </div>
+  </div>
+  <div class="separacion_pagina"></div> 
+<script>
+  window.onload = function () {
+    const cuentaRegresiva = new Date("November 15, 2025 00:00:00").getTime();
+
+    const relojNumeros = document.getElementById("reloj-numeros");
+    const relojTexto = document.getElementById("reloj-texto");
+    const relojTexto2 = document.getElementById("reloj-texto2");
+
+    function actualizarContador() {
+      const ahora = new Date().getTime();
+      const diferencia = cuentaRegresiva - ahora;
+
+      if (diferencia < 0) {
+        relojNumeros.innerHTML = "¡Llegó el gran día!";
+        relojTexto.innerHTML = "";
+        relojTexto2.innerHTML = "";
+        return;
+      }
+
+      const dias = String(Math.floor(diferencia / (1000 * 60 * 60 * 24))).padStart(2, '0');
+      const horas = String(Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+      const minutos = String(Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+      const segundos = String(Math.floor((diferencia % (1000 * 60)) / 1000)).padStart(2, '0');
+
+      relojNumeros.innerHTML = `${dias} : ${horas} : ${minutos} : ${segundos}`;
+      relojTexto.innerHTML = `días&nbsp;&nbsp;hrs&nbsp;&nbsp;min&nbsp;&nbsp;seg`;
+      relojTexto2.innerHTML = `FALTAN`;
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+  };
+</script>
+
+</body>
+</html>
