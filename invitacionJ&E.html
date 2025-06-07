@@ -94,7 +94,7 @@
     }
   .logo-mapa {
   position: absolute;
-  top: 82%;          /* Ajusta según el lugar deseado sobre la imagen */
+  top: 81%;          /* Ajusta según el lugar deseado sobre la imagen */
   right: 71%;         /* Ajusta para moverlo horizontalmente */
   background: rgba(255, 255, 255, 0); /* Fondo transparente */
   border-radius: 8px;
@@ -173,6 +173,28 @@
   transform: scale(1.1);
 }
 
+.play-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff4d6d;
+  color: white;
+  font-size: 1.0rem;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 9999;
+}
+
+.play-button:hover {
+  background-color: #e63950;
+  transform: scale(1.1);
+}
+
 /* Efecto de pulsación */
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -213,6 +235,9 @@
 </head>
 <body>
   <div class="separacion_pagina"></div>
+  <button id="btnPlayPause" class="play-button" title="Reproducir música">
+  ▶
+</button>
   <div class="imagen">
     <img src="1.jpg" alt="Invitación parte 2">
   </div>
@@ -268,6 +293,8 @@
       <a href="https://tulink.com/confirmar" target="_blank" class="btn-confirmar">Confirmar asistencia</a>
     </div>
   </div>
+  <audio id="bgMusic" loop>
+  <source src="Bruno-Mars-Marry-You.mp3" type="audio/mpeg"></audio>
   <div class="separacion_pagina"></div> 
 <script>
   window.onload = function () {
@@ -301,6 +328,20 @@
     actualizarContador();
     setInterval(actualizarContador, 1000);
   };
+  
+  const btn = document.getElementById('btnPlayPause');
+  const audio = document.getElementById('bgMusic');
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = '⏸'; // Cambia a ícono de pausa
+    } else {
+      audio.pause();
+      btn.textContent = '▶'; // Vuelve al ícono de play
+    }
+  });
+
 </script>
 
 </body>
