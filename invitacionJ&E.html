@@ -177,23 +177,30 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #9cdcfc;
+  background-color: #000; /* Negro fijo */
   color: white;
-  font-size: 1.0rem;
+  font-size: 1.8rem;
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
+  transition: transform 0.2s;
   z-index: 9999;
 }
 
 .play-button:hover {
-  background-color: #e63950;
   transform: scale(1.1);
 }
+
+.play-button:focus,
+.play-button:active {
+  background-color: #000 !important; /* Siempre negro */
+  outline: none;
+  box-shadow: none;
+}
+
 
 /* Efecto de pulsación */
 @keyframes pulse {
