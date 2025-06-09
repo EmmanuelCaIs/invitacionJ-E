@@ -177,9 +177,9 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #000; /* Negro fijo */
+  background-color: #69cdeb; /* Negro fijo */
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -196,7 +196,7 @@
 
 .play-button:focus,
 .play-button:active {
-  background-color: #000 !important; /* Siempre negro */
+  background-color: #69cdeb !important; /* Siempre negro */
   outline: none;
   box-shadow: none;
 }
@@ -243,7 +243,7 @@
 <body>
   <div class="separacion_pagina"></div>
   <button id="btnPlayPause" class="play-button" title="Reproducir música">
-  ▶
+  Play
 </button>
   <div class="imagen">
     <img src="1.jpg" alt="Invitación parte 2">
@@ -342,10 +342,10 @@
   btn.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
-      btn.textContent = '⏸'; // Cambia a ícono de pausa
+      btn.textContent = 'Stop'; // Cambia a ícono de pausa
     } else {
       audio.pause();
-      btn.textContent = '▶'; // Vuelve al ícono de play
+      btn.textContent = 'Play'; // Vuelve al ícono de play
     }
   });
 
